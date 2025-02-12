@@ -1,0 +1,20 @@
+{
+  "name": "any-oracle",
+  "version": "0.1.0",
+  "description": "Oracle protocol using Cartesi Coprocessor",
+  "dependencies": {
+    "ethers": "^6.7.1",
+    "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.2"
+  },
+  "scripts": {
+    "build": "esbuild ./src/index.js --bundle --outfile=dist/index.js --platform=node --target=node20",
+    "start": "ROLLUP_HTTP_SERVER_URL=\"http://127.0.0.1:5004\" COINGECKO_API_KEY=\"api-key\" node src/index.js"
+  },
+  "keywords": [
+    "cartesi"
+  ],
+  "license": "MIT"
+}
