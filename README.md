@@ -9,6 +9,20 @@ You can use **AnyOracle** in your dApps with some few steps.
 
 ![Flow](./docs/Flow.png)
 
+For execution from the dApp, the following attributes must be sent as information in the request: 
+- "type" (string): For now, just "crypto", and soon, other types, such as commodities, fiat, stocks, and more.
+- "currency_name" (string): The name of the currency you want to get the rates, for example, "bitcoin", "ethereum", and "xrpl". In this context, it needs to be the name, not the ticker, according to Coingecko.
+- "to_currency" (string): The currency you want to use for the conversion, for example "USD", "EUR", and more.
+
+Example: 
+```json
+{
+  "type": "crypto",
+  "currency_name": "bitcoin",
+  "to_currency": "usd"
+}
+```
+
 ## How works? 
 
 1. Any user or smart contract can query for a pair (according to Coingecko rules, for example, cryptocurrencies do not use the ticker, but the name, like _bitcoin_ instead of _btc_). For this, the getRate() function is called specifying the base asset and the quote asset.
