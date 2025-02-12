@@ -23,3 +23,8 @@ You can use **AnyOracle** in your dApps with some few steps.
 2. Get a free API Key from Congecko.
 3. Update the environment in the [docker file for the dApp](./anyoracle-dapp/Dockerfile) with the API key.
 4. Deploy the project in devnet, testnet or mainnet using [Cartesi Coprocessor CLI](https://docs.mugen.builders/cartesi-co-processor-tutorial/running)
+
+## Components
+
+- [Smart contract](./anyoracle-dapp/): It contains the base contract to call and receive information from the dApp and Coprocessor.
+- [dApp](./anyoracle-dapp/): It is the backend with the logic, calling the coingeko API and using Cartesi and Docker.
